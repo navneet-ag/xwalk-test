@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: https://author-p133911-e1313554.adobeaemcloud.com/bin/franklin.delivery/navneet-ag/demo/main
+    url: https://author-p133911-e1313554.adobeaemcloud.com/bin/franklin.delivery/navneet-ag/xwalk-test/main
     type: "markup"
     suffix: ".html"
