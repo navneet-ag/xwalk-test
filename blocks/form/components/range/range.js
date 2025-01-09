@@ -17,7 +17,7 @@ function updateBubble(input, element) {
   const style = Object.entries(steps).map(([varName, varValue]) => `${varName}:${varValue}`).join(';');
   bubble.style.left = `calc(${left})`;
   element.setAttribute('style', style);
-  }
+}
 
 export default async function decorate(fieldDiv, fieldJson) {
   console.log('RANGE DIV: ', fieldDiv);
@@ -49,5 +49,4 @@ export default async function decorate(fieldDiv, fieldJson) {
   });
   updateBubble(input, div);
   return fieldDiv;
-  }
-  
+}
