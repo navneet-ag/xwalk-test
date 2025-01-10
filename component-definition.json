@@ -415,6 +415,24 @@
           }
         },
         {
+          "title": "OTP",
+          "id": "otp",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/textinput/v1/textinput",
+                "template": {
+                  "jcr:title": "OTP",
+                  "fieldType": "text-input",
+                  "fd:viewType": "otp",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Panel",
           "id": "panel",
           "plugins": {
