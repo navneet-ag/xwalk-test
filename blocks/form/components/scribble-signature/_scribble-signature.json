@@ -1,0 +1,45 @@
+{
+  "definitions": [
+    {
+      "title": "Scribble Signature",
+      "id": "scribble-signature",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/image/v1/image",
+            "template": {
+              "jcr:title": "Scribble Signature",
+              "fieldType": "image",
+              "fd:viewType": "scribble-signature",
+              "enabled": true,
+              "visible": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "scribble-signature",
+      "fields": [
+        {
+          "component": "container",
+          "name": "basic",
+          "label": "Basic",
+          "collapsible": false,
+          "...": "../../../../models/form-common/_basic-input-fields.json"
+        },
+        {
+          "...": "../../../../models/form-common/_help-container.json"
+        },
+        {
+          "component": "text",
+          "name": "placeholderText",
+          "label": "Placeholder Text",
+          "description": "The text to display before the user starts scribbling."
+        }
+      ]
+    }
+  ]
+}
