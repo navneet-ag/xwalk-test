@@ -211,6 +211,39 @@
           }
         },
         {
+          "title": "Captcha (Invisible)",
+          "id": "captcha",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/recaptcha/v1/recaptcha",
+                "template": {
+                  "jcr:title": "Captcha (Invisible)",
+                  "fieldType": "captcha"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Checkbox",
+          "id": "checkbox",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/checkbox/v1/checkbox",
+                "template": {
+                  "jcr:title": "Checkbox",
+                  "fieldType": "checkbox",
+                  "checkedValue": "on",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Checkbox group",
           "id": "checkbox-group",
           "plugins": {
@@ -231,24 +264,6 @@
                   "visible": true,
                   "enabled": true,
                   "orientation": "horizontal"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Checkbox",
-          "id": "checkbox",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/checkbox/v1/checkbox",
-                "template": {
-                  "jcr:title": "Checkbox",
-                  "fieldType": "checkbox",
-                  "checkedValue": "on",
-                  "enabled": true,
-                  "visible": true
                 }
               }
             }
@@ -365,6 +380,24 @@
           }
         },
         {
+          "title": "Modal",
+          "id": "modal",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "template": {
+                  "jcr:title": "Modal",
+                  "fieldType": "panel",
+                  "fd:viewType": "modal",
+                  "enabled": true,
+                  "visible": false
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Number Input",
           "id": "number-input",
           "plugins": {
@@ -374,6 +407,24 @@
                 "template": {
                   "jcr:title": "Number Input",
                   "fieldType": "number-input",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "OTP",
+          "id": "otp",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+                "template": {
+                  "jcr:title": "OTP",
+                  "fieldType": "number-input",
+                  "fd:viewType": "otp",
                   "enabled": true,
                   "visible": true
                 }
@@ -425,144 +476,6 @@
           }
         },
         {
-          "title": "Captcha (Invisible)",
-          "id": "captcha",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/recaptcha/v1/recaptcha",
-                "template": {
-                  "jcr:title": "Captcha (Invisible)",
-                  "fieldType": "captcha"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Reset",
-          "id": "form-reset-button",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/actions/reset/v1/reset",
-                "template": {
-                  "jcr:title": "Reset",
-                  "buttonType": "reset",
-                  "fieldType": "button",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Submit",
-          "id": "form-submit-button",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/actions/submit/v1/submit",
-                "template": {
-                  "jcr:title": "Submit",
-                  "buttonType": "submit",
-                  "fieldType": "button",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Telephone input",
-          "id": "telephone-input",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/telephoneinput/v1/telephoneinput",
-                "template": {
-                  "jcr:title": "Telephone Input",
-                  "fieldType": "text-input",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Text Input",
-          "id": "text-input",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/textinput/v1/textinput",
-                "template": {
-                  "jcr:title": "Text Input",
-                  "fieldType": "text-input",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Text",
-          "id": "plain-text",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/text/v1/text",
-                "template": {
-                  "jcr:title": "Text",
-                  "fieldType": "plain-text",
-                  "visible": true,
-                  "textIsRich": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Modal",
-          "id": "modal",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
-                "template": {
-                  "jcr:title": "Modal",
-                  "fieldType": "panel",
-                  "fd:viewType": "modal",
-                  "enabled": true,
-                  "visible": false
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "OTP",
-          "id": "otp",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
-                "template": {
-                  "jcr:title": "OTP",
-                  "fieldType": "number-input",
-                  "fd:viewType": "otp",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Range",
           "id": "range",
           "plugins": {
@@ -599,6 +512,24 @@
           }
         },
         {
+          "title": "Reset",
+          "id": "form-reset-button",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/actions/reset/v1/reset",
+                "template": {
+                  "jcr:title": "Reset",
+                  "buttonType": "reset",
+                  "fieldType": "button",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Scribble Signature",
           "id": "scribble-signature",
           "plugins": {
@@ -609,6 +540,41 @@
                   "jcr:title": "Scribble Signature",
                   "fieldType": "image",
                   "fd:viewType": "scribble-signature",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Submit",
+          "id": "form-submit-button",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/actions/submit/v1/submit",
+                "template": {
+                  "jcr:title": "Submit",
+                  "buttonType": "submit",
+                  "fieldType": "button",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Telephone input",
+          "id": "telephone-input",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/telephoneinput/v1/telephoneinput",
+                "template": {
+                  "jcr:title": "Telephone Input",
+                  "fieldType": "text-input",
                   "enabled": true,
                   "visible": true
                 }
@@ -669,6 +635,40 @@
                     "enabled": true,
                     "visible": true
                   }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Text",
+          "id": "plain-text",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/text/v1/text",
+                "template": {
+                  "jcr:title": "Text",
+                  "fieldType": "plain-text",
+                  "visible": true,
+                  "textIsRich": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Text Input",
+          "id": "text-input",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/textinput/v1/textinput",
+                "template": {
+                  "jcr:title": "Text Input",
+                  "fieldType": "text-input",
+                  "enabled": true,
+                  "visible": true
                 }
               }
             }
