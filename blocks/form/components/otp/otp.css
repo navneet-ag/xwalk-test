@@ -1,24 +1,21 @@
-.otp-wrapper {
+/** Styling for OTP */
+.otp-input-container {
   display: flex;
-  gap: 8px;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.otp-box {
-  position: relative;
-}
-
-.otp-box input {
-  width: 40px;
+.otp-input {
+  width: 30px;
   height: 40px;
   text-align: center;
-  font-size: 18px;
+  font-size: 24px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  outline: none;
+  margin: 0 5px;
 }
 
-.otp-box input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+.otp-dash {
+  font-size: 24px;
+  margin: 0 5px;
 }
