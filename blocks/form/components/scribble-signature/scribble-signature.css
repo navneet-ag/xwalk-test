@@ -1,0 +1,24 @@
+/* Style for the Scribble Signature component */
+.scribble-signature-canvas {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin: 10px auto;
+  background-color: #fff;
+}
+
+.scribble-signature-clear {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #0073e6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.scribble-signature-clear:hover {
+  background-color: #005bb5;
+}
