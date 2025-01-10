@@ -1,31 +1,24 @@
-/** Styling for OTP Component **/
-.otp-input-wrapper {
+.otp-wrapper {
   display: flex;
+  gap: 8px;
   justify-content: center;
-  gap: 10px;
 }
 
-.otp-input {
+.otp-box {
+  position: relative;
+}
+
+.otp-box input {
   width: 40px;
-  height: 50px;
-  font-size: 24px;
+  height: 40px;
   text-align: center;
-  border: 2px solid #c5c5c5;
-  border-radius: 5px;
-  outline: none;
-  transition: border-color 0.2s ease-in-out;
-}
-
-.otp-input:focus {
-  border-color: var(--button-primary-color);
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   outline: none;
 }
 
-.otp-input-wrapper .otp-input:focus-visible {
-  outline: none;
-}
-
-.otp-input::placeholder {
-  color: #c5c5c5;
-  opacity: 0.5;
+.otp-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }

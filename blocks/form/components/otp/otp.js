@@ -1,34 +1,52 @@
-export default async function decorate(fieldDiv, fieldJson) {
-  console.log('OTP FIELD DIV: ', fieldDiv);
-  console.log('OTP JSON: ', fieldJson);
+export default function decorate(fieldDiv) {
+  const input = fieldDiv.querySelector('input');
+  input.type = 'text'; // Use text to allow custom formatting
+  input.maxLength = 6;
+  input.pattern = '\\d{6}'; // Enforce numeric input
 
-  const otpLength = fieldJson.properties?.otpLength || 6;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'otp-wrapper';
+  input.after(wrapper);
 
-  // Create a wrapper for OTP input fields
-  const otpWrapper = document.createElement('div');
-  otpWrapper.className = 'otp-input-wrapper';
+  // Create individual boxes for each digit
+  for (let i = 0; i < 6; i += 1) {
+    const box = document.createElement('div');
+    box.className = 'otp-box';
+    const digitInput = document.createElement('input');
+    digitInput.type = 'text';
+    digitInput.maxLength = 1;
+    digitInput.inputMode = 'numeric';
+    box.appendChild(digitInput);
+    wrapper.appendChild(box);
 
-  // Create OTP input fields
-  for (let i = 0; i < otpLength; i += 1) {
-    const otpInput = document.createElement('input');
-    otpInput.type = 'text';
-    otpInput.maxLength = 1;
-    otpInput.className = 'otp-input';
-    otpWrapper.appendChild(otpInput);
+    // Auto-focus the next input
+    digitInput.addEventListener('input', () => {
+      if (digitInput.value.length === 1 && i < 5) {
+        wrapper.children[i + 1].querySelector('input').focus();
+      }
+    });
 
-    // Handle key navigation
-    otpInput.addEventListener('keyup', (e) => {
-      if (e.key === 'Backspace' || e.key === 'ArrowLeft') {
-        const prev = otpInput.previousElementSibling;
-        if (prev && prev.classList.contains('otp-input')) prev.focus();
-      } else {
-        const next = otpInput.nextElementSibling;
-        if (next && next.classList.contains('otp-input')) next.focus();
+    // Backspace to focus the previous input
+    digitInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && digitInput.value === '' && i > 0) {
+        wrapper.children[i - 1].querySelector('input').focus();
       }
     });
   }
 
-  // Append the OTP wrapper after the original fieldDiv
-  fieldDiv.appendChild(otpWrapper);
+  // Add a hidden input to store the final OTP
+  const hiddenInput = document.createElement('input');
+  hiddenInput.type = 'hidden';
+  hiddenInput.name = input.name;
+  wrapper.appendChild(hiddenInput);
+
+  // Sync individual inputs to the hidden input
+  wrapper.addEventListener('input', () => {
+    hiddenInput.value = Array.from(wrapper.querySelectorAll('.otp-box input'))
+      .map((el) => el.value)
+      .join('');
+  });
+
+  input.remove(); // Remove the original input
   return fieldDiv;
 }

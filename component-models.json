@@ -4052,14 +4052,6 @@
             "description": "Error message shown when the entered value is more than maximum."
           }
         ]
-      },
-      {
-        "component": "number",
-        "name": "otpLength",
-        "label": "OTP Length",
-        "valueType": "number",
-        "defaultValue": 6,
-        "description": "Length of the OTP (default: 6 digits)"
       }
     ]
   },
