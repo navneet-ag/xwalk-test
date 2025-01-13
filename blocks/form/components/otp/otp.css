@@ -1,7 +1,6 @@
-/** Styling for OTP */
-.otp-input-container {
+.otp-input-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -15,7 +14,7 @@
   margin: 0 5px;
 }
 
-.otp-dash {
-  font-size: 24px;
-  margin: 0 5px;
+.otp-input:focus {
+  border-color: #007bff;
+  outline: none;
 }

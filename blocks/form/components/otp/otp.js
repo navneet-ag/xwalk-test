@@ -1,40 +1,26 @@
-function createOtpInput() {
-  const container = document.createElement('div');
-  container.className = 'otp-input-container';
-
-  for (let i = 0; i < 6; i += 1) {
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.maxLength = 1;
-    input.className = 'otp-input';
-    container.appendChild(input);
-
-    if (i < 5) {
-      const dash = document.createElement('span');
-      dash.className = 'otp-dash';
-      dash.innerText = '-';
-      container.appendChild(dash);
-    }
-  }
-
-  return container;
-}
-
-export default async function decorate(fieldDiv, fieldJson) {
+export default function decorate(fieldDiv, fieldJson) {
   console.log('OTP DIV: ', fieldDiv);
   console.log('OTP JSON: ', fieldJson);
 
-  const otpContainer = createOtpInput();
-  fieldDiv.appendChild(otpContainer);
+  const inputWrapper = document.createElement('div');
+  inputWrapper.className = 'otp-input-wrapper';
 
-  const inputs = otpContainer.querySelectorAll('.otp-input');
-  inputs.forEach((input, index) => {
+  for (let i = 0; i < 6; i += 1) {
+    const input = document.createElement('input');
+    input.type = 'number';
+    input.maxLength = 1;
+    input.className = 'otp-input';
     input.addEventListener('input', (e) => {
-      if (e.target.value.length === 1 && index < inputs.length - 1) {
-        inputs[index + 1].focus();
+      if (e.target.value.length === 1) {
+        const nextInput = e.target.nextElementSibling;
+        if (nextInput) {
+          nextInput.focus();
+        }
       }
     });
-  });
+    inputWrapper.appendChild(input);
+  }
 
+  fieldDiv.appendChild(inputWrapper);
   return fieldDiv;
 }
