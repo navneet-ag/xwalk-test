@@ -170,7 +170,8 @@
         "wizard",
         "range",
         "scribble-signature",
-        "otp"
+        "otp",
+        "nps-rating"
       ]
     }
   ]

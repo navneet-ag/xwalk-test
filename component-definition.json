@@ -398,6 +398,24 @@
           }
         },
         {
+          "title": "NPS Rating",
+          "id": "nps-rating",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+                "template": {
+                  "jcr:title": "NPS Rating",
+                  "fieldType": "number-input",
+                  "fd:viewType": "nps-rating",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Number Input",
           "id": "number-input",
           "plugins": {

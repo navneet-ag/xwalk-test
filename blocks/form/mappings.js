@@ -1,6 +1,6 @@
 import { loadCSS } from '../../scripts/aem.js';
 
-let customComponents = ['range', 'scribble-signature', 'otp'];
+let customComponents = ['range', 'scribble-signature', 'otp', 'nps-rating'];
 const OOTBComponentDecorators = ['file-input', 'wizard', 'modal', 'tnc', 'toggleable-link', 'rating', 'datetime', 'list', 'location'];
 
 export function setCustomComponents(components) {
