@@ -1,20 +1,15 @@
-.otp-input-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .otp-input {
-  width: 30px;
-  height: 40px;
-  text-align: center;
-  font-size: 24px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin: 0 5px;
+  letter-spacing: 0.5em;
+  padding-right: 50px;
 }
 
-.otp-input:focus {
-  border-color: #007bff;
-  outline: none;
+.otp-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--link-color);
 }

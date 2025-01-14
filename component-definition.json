@@ -420,10 +420,10 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+                "resourceType": "core/fd/components/form/textinput/v1/textinput",
                 "template": {
                   "jcr:title": "OTP",
-                  "fieldType": "number-input",
+                  "fieldType": "text-input",
                   "fd:viewType": "otp",
                   "enabled": true,
                   "visible": true
