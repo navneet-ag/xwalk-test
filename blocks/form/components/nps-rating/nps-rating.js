@@ -1,4 +1,5 @@
 export default function decorate(fieldDiv) {
+  fieldDiv.classList.add('nps-rating');
   const input = fieldDiv.querySelector('input[type="number"]');
   const max = 10;
   const scaleDiv = document.createElement('div');
