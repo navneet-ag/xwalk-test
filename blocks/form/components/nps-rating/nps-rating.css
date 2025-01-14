@@ -1,0 +1,46 @@
+main .form .nps-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main .form .nps-rating .scale {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+  }
+  
+  main .form .nps-rating .scale .number {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  main .form .nps-rating .scale .number.selected {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  main .form .nps-rating .scale .number.not-likely {
+    background-color: #ff4d4d;
+  }
+  
+  main .form .nps-rating .scale .number.maybe {
+    background-color: #ffcc00;
+  }
+  
+  main .form .nps-rating .scale .number.very-likely {
+    background-color: #66ff66;
+  }
+  
+  main .form .nps-rating .labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  main .form .nps-rating .labels .label {
+    flex: 1;
+    text-align: center;
+  }
+  
