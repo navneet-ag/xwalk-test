@@ -1,23 +1,41 @@
-export default function decorate(fieldDiv) {
-  const input = fieldDiv.querySelector('input');
-  input.type = 'password';
+export default function decorate(otpComponent) {
+  otpComponent.classList.add('otp-component');
+
+  const message = document.createElement('div');
+  message.classList.add('otp-message');
+  message.textContent = 'An OTP has been sent to your registered mobile number.';
+  otpComponent.appendChild(message);
+
+  const editMobile = document.createElement('div');
+  editMobile.classList.add('edit-mobile');
+  editMobile.textContent = 'Edit Mobile Number';
+  otpComponent.appendChild(editMobile);
+
+  const input = document.createElement('input');
   input.classList.add('otp-input');
+  input.type = 'text';
+  input.maxLength = 6;
+  input.placeholder = '••••••';
+  otpComponent.appendChild(input);
 
-  const toggleButton = document.createElement('button');
-  toggleButton.type = 'button';
-  toggleButton.innerText = 'Show';
-  toggleButton.classList.add('otp-toggle');
-  fieldDiv.appendChild(toggleButton);
+  const timer = document.createElement('div');
+  timer.classList.add('otp-timer');
+  timer.textContent = 'Resend OTP in 60 seconds';
+  otpComponent.appendChild(timer);
 
-  toggleButton.addEventListener('click', () => {
-    if (input.type === 'password') {
-      input.type = 'text';
-      toggleButton.innerText = 'Hide';
-    } else {
-      input.type = 'password';
-      toggleButton.innerText = 'Show';
+  const attempts = document.createElement('div');
+  attempts.classList.add('otp-attempts');
+  attempts.textContent = 'Attempts left: 3';
+  otpComponent.appendChild(attempts);
+
+  // Add functionality for countdown timer and attempts left
+  let countdown = 60;
+  const interval = setInterval(() => {
+    countdown -= 1;
+    timer.textContent = `Resend OTP in ${countdown} seconds`;
+    if (countdown === 0) {
+      clearInterval(interval);
+      timer.textContent = 'Resend OTP now';
     }
-  });
-
-  return fieldDiv;
+  }, 1000);
 }

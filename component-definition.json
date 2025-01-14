@@ -415,15 +415,15 @@
           }
         },
         {
-          "title": "OTP",
-          "id": "otp",
+          "title": "OTP Component",
+          "id": "otp-component",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/fd/components/form/textinput/v1/textinput",
+                "resourceType": "core/fd/components/form/otp/v1/otp",
                 "template": {
-                  "jcr:title": "OTP",
-                  "fieldType": "text-input",
+                  "jcr:title": "OTP Component",
+                  "fieldType": "otp",
                   "fd:viewType": "otp",
                   "enabled": true,
                   "visible": true
