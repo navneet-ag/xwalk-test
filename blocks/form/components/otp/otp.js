@@ -1,6 +1,4 @@
 export default function decorate(otpComponent) {
-  const input_initial = fieldDiv.querySelector('input[type="number"]');
-  input_initial.style.display = 'none';
   otpComponent.classList.add('otp-component');
 
   const message = document.createElement('div');
