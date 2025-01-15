@@ -530,6 +530,24 @@
           }
         },
         {
+          "title": "Rating Scale",
+          "id": "rating-scale",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+                "template": {
+                  "jcr:title": "Rating Scale",
+                  "fieldType": "number-input",
+                  "fd:viewType": "rating-scale",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Reset",
           "id": "form-reset-button",
           "plugins": {

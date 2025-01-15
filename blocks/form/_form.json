@@ -171,7 +171,8 @@
         "range",
         "scribble-signature",
         "otp",
-        "nps-rating"
+        "nps-rating",
+        "rating-scale"
       ]
     }
   ]

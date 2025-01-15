@@ -1,0 +1,42 @@
+main .form .rating-scale {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+  }
+  
+  main .form .rating-scale .rating {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+  }
+  
+  main .form .rating-scale .rating.low {
+    background-color: #ffcccc;
+  }
+  
+  main .form .rating-scale .rating.medium {
+    background-color: #ffebcc;
+  }
+  
+  main .form .rating-scale .rating.high {
+    background-color: #ccffcc;
+  }
+  
+  main .form .rating-scale .rating.selected {
+    font-weight: bold;
+    border: 2px solid #000;
+  }
+  
+  main .form .rating-scale .label {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  main .form .rating-scale .label span {
+    flex: 1;
+    text-align: center;
+  }
+  

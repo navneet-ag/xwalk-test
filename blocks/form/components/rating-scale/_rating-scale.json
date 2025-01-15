@@ -1,0 +1,46 @@
+{
+    "definitions": [
+      {
+        "title": "Rating Scale",
+        "id": "rating-scale",
+        "plugins": {
+          "xwalk": {
+            "page": {
+              "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+              "template": {
+                "jcr:title": "Rating Scale",
+                "fieldType": "number-input",
+                "fd:viewType": "rating-scale",
+                "enabled": true,
+                "visible": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "models": [
+      {
+        "id": "rating-scale",
+        "fields": [
+          {
+            "component": "container",
+            "name": "basic",
+            "label": "Basic",
+            "collapsible": false,
+            "...": "../../../../models/form-common/_basic-input-fields.json"
+          },
+          {
+            "...": "../../../../models/form-common/_help-container.json"
+          },
+          {
+            "component": "container",
+            "name": "validation",
+            "label": "Validation",
+            "collapsible": true,
+            "...": "../../../../models/form-common/_number-validation-fields.json"
+          }
+        ]
+      }
+    ]
+  }
