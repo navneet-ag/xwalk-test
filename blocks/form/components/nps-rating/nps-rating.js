@@ -21,6 +21,7 @@ function updateSelection(scaleDiv, value) {
 }
 
 export default function decorate(fieldDiv) {
+  fieldDiv.classList.add('nps-rating');
   const input = fieldDiv.querySelector('input[type="number"]');
   const scaleDiv = document.createElement('div');
   scaleDiv.classList.add('scale');
