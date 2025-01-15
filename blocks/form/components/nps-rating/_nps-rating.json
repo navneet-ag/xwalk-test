@@ -1,46 +1,46 @@
 {
-    "definitions": [
-      {
-        "title": "NPS Rating",
-        "id": "nps-rating",
-        "plugins": {
-          "xwalk": {
-            "page": {
-              "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
-              "template": {
-                "jcr:title": "NPS Rating",
-                "fieldType": "number-input",
-                "fd:viewType": "nps-rating",
-                "enabled": true,
-                "visible": true
-              }
+  "definitions": [
+    {
+      "title": "NPS Rating",
+      "id": "nps-rating",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+            "template": {
+              "jcr:title": "NPS Rating",
+              "fieldType": "number-input",
+              "fd:viewType": "nps-rating",
+              "enabled": true,
+              "visible": true
             }
           }
         }
       }
-    ],
-    "models": [
-      {
-        "id": "nps-rating",
-        "fields": [
-          {
-            "component": "container",
-            "name": "basic",
-            "label": "Basic",
-            "collapsible": false,
-            "...": "../../../../models/form-common/_basic-input-fields.json"
-          },
-          {
-            "...": "../../../../models/form-common/_help-container.json"
-          },
-          {
-            "component": "container",
-            "name": "validation",
-            "label": "Validation",
-            "collapsible": true,
-            "...": "../../../../models/form-common/_number-validation-fields.json"
-          }
-        ]
-      }
-    ]
-  }
+    }
+  ],
+  "models": [
+    {
+      "id": "nps-rating",
+      "fields": [
+        {
+          "component": "container",
+          "name": "basic",
+          "label": "Basic",
+          "collapsible": false,
+          "...": "../../../../models/form-common/_basic-input-fields.json"
+        },
+        {
+        "...": "../../../../models/form-common/_help-container.json"
+        },
+        {
+          "component": "container",
+          "name": "validation",
+          "label": "Validation",
+          "collapsible": true,
+          "...": "../../../../models/form-common/_number-validation-fields.json"
+        }
+      ]
+    }
+  ]
+}
