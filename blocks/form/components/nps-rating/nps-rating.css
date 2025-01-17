@@ -1,50 +1,29 @@
 main .form .nps-rating {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px 0;
+  gap: 5px;
+  margin: 0;
 }
 
-main .form .nps-rating .label {
-  font-size: 14px;
-  margin: 0 10px;
-}
-
-main .form .nps-rating .scale {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-main .form .nps-rating .scale .number {
+main .form .nps-rating .number {
   cursor: pointer;
   padding: 10px;
-  border-radius: 50%;
-  transition: background-color 0.3s;
+  border-radius: 5px;
 }
 
-main .form .nps-rating .scale .number.selected {
+main .form .nps-rating .number.selected {
   background-color: green;
   color: white;
 }
 
-main .form .nps-rating .scale .bar {
-  height: 5px;
-  width: 100%;
-  background-color: lightgray;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-main .form .nps-rating .scale.low .bar {
+main .form .nps-rating .number.red {
   background-color: red;
 }
 
-main .form .nps-rating .scale.medium .bar {
+main .form .nps-rating .number.orange {
   background-color: orange;
 }
 
-main .form .nps-rating .scale.high .bar {
+main .form .nps-rating .number.green {
   background-color: green;
+  color: white;
 }
