@@ -226,24 +226,6 @@
           }
         },
         {
-          "title": "Card Carousel",
-          "id": "card-carousel",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
-                "template": {
-                  "jcr:title": "Card Carousel",
-                  "fieldType": "panel",
-                  "fd:viewType": "card-carousel",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Checkbox",
           "id": "checkbox",
           "plugins": {
@@ -282,6 +264,24 @@
                   "visible": true,
                   "enabled": true,
                   "orientation": "horizontal"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Credit Card Carousel",
+          "id": "card-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "template": {
+                  "jcr:title": "Credit Card Carousel",
+                  "fieldType": "panel",
+                  "fd:viewType": "card-carousel",
+                  "enabled": true,
+                  "visible": true
                 }
               }
             }

@@ -1,14 +1,14 @@
 {
   "definitions": [
     {
-      "title": "Card Carousel",
+      "title": "Credit Card Carousel",
       "id": "card-carousel",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
             "template": {
-              "jcr:title": "Card Carousel",
+              "jcr:title": "Credit Card Carousel",
               "fieldType": "panel",
               "fd:viewType": "card-carousel",
               "enabled": true,

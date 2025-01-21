@@ -1,24 +1,67 @@
 export default async function decorate(fieldDiv, fieldJson) {
-  console.log('CARD CAROUSEL DIV: ', fieldDiv);
-  console.log('CARD CAROUSEL JSON: ', fieldJson);
+  console.log('Card Carousel DIV: ', fieldDiv);
+  console.log('Card Carousel JSON: ', fieldJson);
+
   const cards = fieldJson.cards || [];
-  const wrapper = document.createElement('div');
-  wrapper.className = 'card-carousel-wrapper';
+  const carouselWrapper = document.createElement('div');
+  carouselWrapper.className = 'card-carousel-wrapper';
+
   cards.forEach((card) => {
-    const cardItem = document.createElement('div');
-    cardItem.className = 'card-item';
-    cardItem.innerHTML = `
-      <img src="${card.image}" alt="${card.title}">
-      <div class="title">${card.title}</div>
-      <div class="subtitle">${card.subtitle}</div>
-      <ul class="features">
-        ${card.features.map((feature) => `<li>${feature}</li>`).join('')}
-      </ul>
-      <div class="fd-amount">Minimum FD Amount: ${card.fdAmount}</div>
-      <a href="#" class="cta-button">Get This Card</a>
-    `;
-    wrapper.appendChild(cardItem);
+    const cardDiv = document.createElement('div');
+    cardDiv.className = 'card';
+
+    const img = document.createElement('img');
+    img.src = card.image;
+    cardDiv.appendChild(img);
+
+    const cardContent = document.createElement('div');
+    cardContent.className = 'card-content';
+
+    const title = document.createElement('h3');
+    title.innerText = card.name;
+    cardContent.appendChild(title);
+
+    const description = document.createElement('p');
+    description.innerText = card.description;
+    cardContent.appendChild(description);
+
+    const benefitsList = document.createElement('ul');
+    benefitsList.className = 'benefits';
+    card.benefits.forEach((benefit) => {
+      const benefitItem = document.createElement('li');
+      benefitItem.innerText = benefit;
+      benefitsList.appendChild(benefitItem);
+    });
+    cardContent.appendChild(benefitsList);
+
+    const cta = document.createElement('a');
+    cta.className = 'cta';
+    cta.href = card.ctaLink;
+    cta.innerText = 'Get This Card';
+    cardContent.appendChild(cta);
+
+    cardDiv.appendChild(cardContent);
+    carouselWrapper.appendChild(cardDiv);
   });
-  fieldDiv.appendChild(wrapper);
+
+  const navigationDots = document.createElement('div');
+  navigationDots.className = 'navigation-dots';
+  cards.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    dot.dataset.index = index;
+    navigationDots.appendChild(dot);
+  });
+  carouselWrapper.appendChild(navigationDots);
+
+  const nextArrow = document.createElement('button');
+  nextArrow.className = 'next-arrow';
+  nextArrow.innerText = '>';
+  nextArrow.addEventListener('click', () => {
+    // Logic to navigate to the next slide
+  });
+  carouselWrapper.appendChild(nextArrow);
+
+  fieldDiv.appendChild(carouselWrapper);
   return fieldDiv;
 }
