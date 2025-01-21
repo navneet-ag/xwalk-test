@@ -211,6 +211,57 @@
           }
         },
         {
+          "title": "Captcha (Invisible)",
+          "id": "captcha",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/recaptcha/v1/recaptcha",
+                "template": {
+                  "jcr:title": "Captcha (Invisible)",
+                  "fieldType": "captcha"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card Carousel",
+          "id": "card-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "template": {
+                  "jcr:title": "Card Carousel",
+                  "fieldType": "panel",
+                  "fd:viewType": "card-carousel",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Checkbox",
+          "id": "checkbox",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/checkbox/v1/checkbox",
+                "template": {
+                  "jcr:title": "Checkbox",
+                  "fieldType": "checkbox",
+                  "checkedValue": "on",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Checkbox group",
           "id": "checkbox-group",
           "plugins": {
@@ -231,24 +282,6 @@
                   "visible": true,
                   "enabled": true,
                   "orientation": "horizontal"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Checkbox",
-          "id": "checkbox",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/checkbox/v1/checkbox",
-                "template": {
-                  "jcr:title": "Checkbox",
-                  "fieldType": "checkbox",
-                  "checkedValue": "on",
-                  "enabled": true,
-                  "visible": true
                 }
               }
             }
@@ -365,6 +398,42 @@
           }
         },
         {
+          "title": "Modal",
+          "id": "modal",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "template": {
+                  "jcr:title": "Modal",
+                  "fieldType": "panel",
+                  "fd:viewType": "modal",
+                  "enabled": true,
+                  "visible": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "NPS Rating",
+          "id": "nps-rating",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+                "template": {
+                  "jcr:title": "NPS Rating",
+                  "fieldType": "number-input",
+                  "fd:viewType": "nps-rating",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Number Input",
           "id": "number-input",
           "plugins": {
@@ -374,6 +443,24 @@
                 "template": {
                   "jcr:title": "Number Input",
                   "fieldType": "number-input",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "OTP Component",
+          "id": "otp-component",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/otp/v1/otp",
+                "template": {
+                  "jcr:title": "OTP Component",
+                  "fieldType": "otp",
+                  "fd:viewType": "otp",
                   "enabled": true,
                   "visible": true
                 }
@@ -425,15 +512,54 @@
           }
         },
         {
-          "title": "Captcha (Invisible)",
-          "id": "captcha",
+          "title": "Range",
+          "id": "range",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/fd/components/form/recaptcha/v1/recaptcha",
+                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
                 "template": {
-                  "jcr:title": "Captcha (Invisible)",
-                  "fieldType": "captcha"
+                  "jcr:title": "Range",
+                  "fieldType": "number-input",
+                  "fd:viewType": "range",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Rating",
+          "id": "rating",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+                "template": {
+                  "jcr:title": "Rating",
+                  "fieldType": "number-input",
+                  "fd:viewType": "rating",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Rating Scale",
+          "id": "rating-scale",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+                "template": {
+                  "jcr:title": "Rating Scale",
+                  "fieldType": "number-input",
+                  "fd:viewType": "rating-scale",
+                  "enabled": true,
+                  "visible": true
                 }
               }
             }
@@ -450,6 +576,24 @@
                   "jcr:title": "Reset",
                   "buttonType": "reset",
                   "fieldType": "button",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Scribble Signature",
+          "id": "scribble-signature",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/image/v1/image",
+                "template": {
+                  "jcr:title": "Scribble Signature",
+                  "fieldType": "image",
+                  "fd:viewType": "scribble-signature",
                   "enabled": true,
                   "visible": true
                 }
@@ -485,166 +629,6 @@
                 "template": {
                   "jcr:title": "Telephone Input",
                   "fieldType": "text-input",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Text Input",
-          "id": "text-input",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/textinput/v1/textinput",
-                "template": {
-                  "jcr:title": "Text Input",
-                  "fieldType": "text-input",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Text",
-          "id": "plain-text",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/text/v1/text",
-                "template": {
-                  "jcr:title": "Text",
-                  "fieldType": "plain-text",
-                  "visible": true,
-                  "textIsRich": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Modal",
-          "id": "modal",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
-                "template": {
-                  "jcr:title": "Modal",
-                  "fieldType": "panel",
-                  "fd:viewType": "modal",
-                  "enabled": true,
-                  "visible": false
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "NPS Rating",
-          "id": "nps-rating",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
-                "template": {
-                  "jcr:title": "NPS Rating",
-                  "fieldType": "number-input",
-                  "fd:viewType": "nps-rating",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "OTP Component",
-          "id": "otp-component",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/otp/v1/otp",
-                "template": {
-                  "jcr:title": "OTP Component",
-                  "fieldType": "otp",
-                  "fd:viewType": "otp",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Range",
-          "id": "range",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
-                "template": {
-                  "jcr:title": "Range",
-                  "fieldType": "number-input",
-                  "fd:viewType": "range",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Rating Scale",
-          "id": "rating-scale",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
-                "template": {
-                  "jcr:title": "Rating Scale",
-                  "fieldType": "number-input",
-                  "fd:viewType": "rating-scale",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Rating",
-          "id": "rating",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
-                "template": {
-                  "jcr:title": "Rating",
-                  "fieldType": "number-input",
-                  "fd:viewType": "rating",
-                  "enabled": true,
-                  "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Scribble Signature",
-          "id": "scribble-signature",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/image/v1/image",
-                "template": {
-                  "jcr:title": "Scribble Signature",
-                  "fieldType": "image",
-                  "fd:viewType": "scribble-signature",
                   "enabled": true,
                   "visible": true
                 }
@@ -705,6 +689,40 @@
                     "enabled": true,
                     "visible": true
                   }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Text",
+          "id": "plain-text",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/text/v1/text",
+                "template": {
+                  "jcr:title": "Text",
+                  "fieldType": "plain-text",
+                  "visible": true,
+                  "textIsRich": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Text Input",
+          "id": "text-input",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/textinput/v1/textinput",
+                "template": {
+                  "jcr:title": "Text Input",
+                  "fieldType": "text-input",
+                  "enabled": true,
+                  "visible": true
                 }
               }
             }

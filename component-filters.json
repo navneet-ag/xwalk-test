@@ -70,7 +70,8 @@
       "scribble-signature",
       "otp",
       "nps-rating",
-      "rating-scale"
+      "rating-scale",
+      "creditcard-carousel"
     ]
   }
 ]

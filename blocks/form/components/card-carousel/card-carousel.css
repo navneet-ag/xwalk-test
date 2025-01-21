@@ -1,0 +1,68 @@
+main .form .card-carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.card-carousel-wrapper .card-item {
+  flex: 0 0 auto;
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  background: #fff;
+  padding: 20px;
+}
+
+.card-item img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-item .title {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.card-item .subtitle {
+  font-size: 1.2em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.card-item .features {
+  list-style: none;
+  padding: 0;
+}
+
+.card-item .features li {
+  margin: 5px 0;
+}
+
+.card-item .fd-amount {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card-item .cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  color: #007bff;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-item .cta-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .card-carousel-wrapper .card-item {
+    width: 80%;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "definitions": [
+    {
+      "title": "Card Carousel",
+      "id": "card-carousel",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+            "template": {
+              "jcr:title": "Card Carousel",
+              "fieldType": "panel",
+              "fd:viewType": "card-carousel",
+              "enabled": true,
+              "visible": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "card-carousel",
+      "fields": [
+        {
+          "component": "container",
+          "name": "basic",
+          "label": "Basic",
+          "collapsible": false,
+          "...": "../../../../models/form-common/_basic-fields.json"
+        },
+        {
+          "...": "../../../../models/form-common/_help-container.json"
+        }
+      ]
+    }
+  ]
+}
