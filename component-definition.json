@@ -288,6 +288,24 @@
           }
         },
         {
+          "title": "Credit Card Info Component",
+          "id": "credit-card-info-component",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "template": {
+                  "jcr:title": "Credit Card Info Component",
+                  "fieldType": "panel",
+                  "fd:viewType": "credit-card-info-component",
+                  "enabled": true,
+                  "visible": true
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Date Picker",
           "id": "date-input",
           "plugins": {

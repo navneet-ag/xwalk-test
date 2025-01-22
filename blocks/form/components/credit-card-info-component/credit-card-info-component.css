@@ -1,0 +1,42 @@
+main .form .credit-card-info-component-wrapper {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .credit-card-info-component-wrapper img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .credit-card-info-component-wrapper .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .credit-card-info-component-wrapper .fees {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .credit-card-info-component-wrapper .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .credit-card-info-component-wrapper {
+      padding: 10px;
+    }
+  }
+  

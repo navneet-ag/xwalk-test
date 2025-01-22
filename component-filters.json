@@ -71,7 +71,8 @@
       "otp",
       "nps-rating",
       "rating-scale",
-      "card-carousel"
+      "card-carousel",
+      "credit-card-info-component"
     ]
   }
 ]
