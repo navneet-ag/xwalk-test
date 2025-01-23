@@ -7,9 +7,11 @@ class CardComponent {
 
   decorate() {
     const image = this.fieldDiv.querySelector('img');
-    const titleText = this.fieldDiv.querySelector('.title-text');
-    const bodyText = this.fieldDiv.querySelector('.body-text');
-    const linkText = this.fieldDiv.querySelector('.link-text');
+    const textElements = this.fieldDiv.querySelectorAll('.plain-text-wrapper');
+    const titleText = textElements[0];
+    const bodyText = textElements[1];
+
+    const linkButton = this.fieldDiv.querySelector('button-wrapper');
     const separator = document.createElement('div');
     separator.classList.add('separator');
 
@@ -22,9 +24,9 @@ class CardComponent {
     if (bodyText) {
       bodyText.classList.add('text-padding');
     }
-    if (linkText) {
-      linkText.classList.add('text-padding');
-      linkText.parentNode.insertBefore(separator, linkText);
+    if (linkButton) {
+      linkButton.classList.add('text-padding');
+      linkButton.parentNode.insertBefore(separator, linkButton);
     }
   }
 }

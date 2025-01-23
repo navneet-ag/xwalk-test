@@ -35,8 +35,8 @@
               },
               "linkText": {
                 "value": "View Other Card Options",
-                "sling:resourceType": "core/fd/components/form/text/v1/text",
-                "fieldType": "plain-text",
+                "sling:resourceType": "core/fd/components/form/button/v1/button",
+                "fieldType": "button",
                 "enabled": true,
                 "visible": true
               }
