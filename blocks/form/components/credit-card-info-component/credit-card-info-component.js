@@ -11,7 +11,7 @@ class CardComponent {
     const titleText = textElements[0];
     const bodyText = textElements[1];
 
-    const linkButton = this.fieldDiv.querySelector('button-wrapper');
+    const linkButton = this.fieldDiv.querySelector('.button-wrapper');
     const separator = document.createElement('div');
     separator.classList.add('separator');
 
