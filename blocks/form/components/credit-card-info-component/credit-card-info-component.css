@@ -7,7 +7,7 @@
   margin: 10px 0;
 }
 .card-component-wrapper img {
-  width: 40%;
+  width: 100%;
   border-radius: 10px;
 }
 .card-component-wrapper .title-text {
@@ -24,8 +24,8 @@
   margin-top: 5px;
 }
 .card-component-wrapper .separator {
-  width: 40%;
-  border-top: 1px solid #E0E0E0;
+  width: 100%;
+  border-top: 4px solid #E0E0E0;
   margin-top: 10px;
 }
 .card-component-wrapper .text-padding {
