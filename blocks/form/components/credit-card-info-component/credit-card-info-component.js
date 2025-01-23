@@ -1,48 +1,27 @@
-class CreditCardInfoCard {
-  constructor(fieldDiv, fieldJson) {
-    this.fieldDiv = fieldDiv;
-    this.fieldJson = fieldJson;
-    this.decorate();
-  }
-
-  decorate() {
-    const {
-      image,
-      cardFees,
-      issuanceFees,
-      annualFees,
-      viewOtherOptions,
-    } = this.fieldJson;
-    const imgElement = document.createElement('img');
-    imgElement.src = image.value;
-    this.fieldDiv.appendChild(imgElement);
-
-    const cardDetailsDiv = document.createElement('div');
-    cardDetailsDiv.classList.add('card-details');
-
-    const cardFeesElement = document.createElement('p');
-    cardFeesElement.textContent = cardFees.value;
-    cardDetailsDiv.appendChild(cardFeesElement);
-
-    const issuanceFeesElement = document.createElement('p');
-    issuanceFeesElement.textContent = issuanceFees.value;
-    cardDetailsDiv.appendChild(issuanceFeesElement);
-
-    const annualFeesElement = document.createElement('p');
-    annualFeesElement.textContent = annualFees.value;
-    cardDetailsDiv.appendChild(annualFeesElement);
-
-    this.fieldDiv.appendChild(cardDetailsDiv);
-
-    const viewOtherOptionsElement = document.createElement('a');
-    viewOtherOptionsElement.href = '#';
-    viewOtherOptionsElement.classList.add('view-other-options');
-    viewOtherOptionsElement.textContent = viewOtherOptions.value;
-    this.fieldDiv.appendChild(viewOtherOptionsElement);
-  }
-}
-
 export default async function decorate(fieldDiv, fieldJson) {
-  const creditCardInfoCard = new CreditCardInfoCard(fieldDiv, fieldJson);
-  return creditCardInfoCard.fieldDiv;
+  const image = document.createElement('img');
+  image.src = fieldJson.image.value;
+  fieldDiv.appendChild(image);
+
+  const title = document.createElement('div');
+  title.className = 'title';
+  title.textContent = fieldJson.title.value;
+  fieldDiv.appendChild(title);
+
+  const description = document.createElement('div');
+  description.className = 'description';
+  description.textContent = fieldJson.description.value;
+  fieldDiv.appendChild(description);
+
+  const separator = document.createElement('div');
+  separator.className = 'separator';
+  fieldDiv.appendChild(separator);
+
+  const link = document.createElement('a');
+  link.className = 'link';
+  link.href = fieldJson.link.link;
+  link.textContent = fieldJson.link.value;
+  fieldDiv.appendChild(link);
+
+  return fieldDiv;
 }

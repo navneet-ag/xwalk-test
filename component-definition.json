@@ -288,42 +288,38 @@
           }
         },
         {
-          "title": "Credit Card Info Card",
+          "title": "Credit Card Info",
           "id": "credit-card-info-component",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
                 "template": {
-                  "jcr:title": "Credit Card Info Card",
+                  "jcr:title": "Credit Card Info",
                   "fieldType": "panel",
                   "fd:viewType": "credit-card-info-component",
                   "enabled": true,
                   "visible": true,
                   "image": {
-                    "value": "",
                     "sling:resourceType": "core/fd/components/form/image/v1/image",
-                    "fieldType": "image"
+                    "fieldType": "image",
+                    "value": "path/to/image.jpg"
                   },
-                  "cardFees": {
-                    "value": "Card Fees",
+                  "title": {
                     "sling:resourceType": "core/fd/components/form/text/v1/text",
-                    "fieldType": "plain-text"
+                    "fieldType": "plain-text",
+                    "value": "Card Fees"
                   },
-                  "issuanceFees": {
-                    "value": "Issuance Fees",
+                  "description": {
                     "sling:resourceType": "core/fd/components/form/text/v1/text",
-                    "fieldType": "plain-text"
+                    "fieldType": "plain-text",
+                    "value": "Issuance Fees: ₹1,000 + GST\nAnnual Fees: ₹0"
                   },
-                  "annualFees": {
-                    "value": "Annual Fees",
+                  "link": {
                     "sling:resourceType": "core/fd/components/form/text/v1/text",
-                    "fieldType": "plain-text"
-                  },
-                  "viewOtherOptions": {
+                    "fieldType": "plain-text",
                     "value": "View Other Card Options",
-                    "sling:resourceType": "core/fd/components/form/button/v1/button",
-                    "fieldType": "button"
+                    "link": "#"
                   }
                 }
               }
