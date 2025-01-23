@@ -1,28 +1,36 @@
+class CreditCardInfoComponent {
+  constructor(fieldDiv, fieldJson) {
+    this.fieldDiv = fieldDiv;
+    this.fieldJson = fieldJson;
+    this.decorate();
+  }
+
+  decorate() {
+    this.fieldDiv.classList.add('credit-card-info-component-wrapper');
+
+    const image = this.fieldDiv.querySelector('img');
+    if (image) {
+      image.classList.add('credit-card-image');
+    }
+
+    const cardFeesTitle = this.fieldDiv.querySelector('.card-fees-title');
+    if (cardFeesTitle) {
+      cardFeesTitle.classList.add('card-fees-title');
+    }
+
+    const cardFeesDetails = this.fieldDiv.querySelector('.card-fees-details');
+    if (cardFeesDetails) {
+      cardFeesDetails.classList.add('card-fees-details');
+    }
+
+    const link = this.fieldDiv.querySelector('.link');
+    if (link) {
+      link.classList.add('link');
+    }
+  }
+}
+
 export default async function decorate(fieldDiv, fieldJson) {
-  // const image = document.createElement('img');
-  // image.src = fieldJson.image.value;
-  // fieldDiv.appendChild(image);
-
-  // const title = document.createElement('div');
-  // title.className = 'title';
-  // title.textContent = fieldJson.title.value;
-  // fieldDiv.appendChild(title);
-
-  // const description = document.createElement('div');
-  // description.className = 'description';
-  // description.textContent = fieldJson.description.value;
-  // fieldDiv.appendChild(description);
-  console.log('fieldJson', fieldJson);
-
-  const separator = document.createElement('div');
-  separator.className = 'separator';
-  fieldDiv.appendChild(separator);
-
-  // const link = document.createElement('a');
-  // link.className = 'link';
-  // link.href = fieldJson.link.link;
-  // link.textContent = fieldJson.link.value;
-  // fieldDiv.appendChild(link);
-
-  return fieldDiv;
+  const component = new CreditCardInfoComponent(fieldDiv, fieldJson);
+  return component.fieldDiv;
 }

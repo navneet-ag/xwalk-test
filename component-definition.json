@@ -288,14 +288,14 @@
           }
         },
         {
-          "title": "Credit Card Info",
+          "title": "Credit Card Info Component",
           "id": "credit-card-info-component",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
                 "template": {
-                  "jcr:title": "Credit Card Info",
+                  "jcr:title": "Credit Card Info Component",
                   "fieldType": "panel",
                   "fd:viewType": "credit-card-info-component",
                   "enabled": true,
@@ -303,23 +303,21 @@
                   "image": {
                     "sling:resourceType": "core/fd/components/form/image/v1/image",
                     "fieldType": "image",
-                    "value": "path/to/image.jpg"
+                    "enabled": true,
+                    "visible": true
                   },
-                  "title": {
+                  "cardFees": {
+                    "title": "Card Fees",
                     "sling:resourceType": "core/fd/components/form/text/v1/text",
                     "fieldType": "plain-text",
-                    "value": "Card Fees"
-                  },
-                  "description": {
-                    "sling:resourceType": "core/fd/components/form/text/v1/text",
-                    "fieldType": "plain-text",
-                    "value": "Issuance Fees: ₹1,000 + GST\nAnnual Fees: ₹0"
+                    "enabled": true,
+                    "visible": true
                   },
                   "link": {
-                    "sling:resourceType": "core/fd/components/form/text/v1/text",
-                    "fieldType": "plain-text",
-                    "value": "View Other Card Options",
-                    "link": "#"
+                    "sling:resourceType": "core/fd/components/form/textinput/v1/textinput",
+                    "fieldType": "text-input",
+                    "enabled": true,
+                    "visible": true
                   }
                 }
               }
