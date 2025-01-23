@@ -56,36 +56,6 @@
           "fields": [
             {
               "...": "../../../../models/form-common/_basic-input-fields.json"
-            },
-            {
-              "component": "string",
-              "name": "image",
-              "label": "Image URL",
-              "valueType": "string"
-            },
-            {
-              "component": "string",
-              "name": "cardFees",
-              "label": "Card Fees",
-              "valueType": "string"
-            },
-            {
-              "component": "string",
-              "name": "issuanceFees",
-              "label": "Issuance Fees",
-              "valueType": "string"
-            },
-            {
-              "component": "string",
-              "name": "annualFees",
-              "label": "Annual Fees",
-              "valueType": "string"
-            },
-            {
-              "component": "string",
-              "name": "viewOtherOptions",
-              "label": "View Other Card Options",
-              "valueType": "string"
             }
           ]
         }
