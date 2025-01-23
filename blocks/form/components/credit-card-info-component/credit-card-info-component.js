@@ -1,27 +1,48 @@
-export default async function decorate(fieldDiv) {
-  const img = document.createElement('img');
-  img.src = 'https://fastly.picsum.photos/id/426/200/300.jpg?hmac=ATVZT7wbjRxxBKYqLXE043ImnR_uNOkz00T9dWGYuow';
-  fieldDiv.appendChild(img);
+class CreditCardInfoCard {
+  constructor(fieldDiv, fieldJson) {
+    this.fieldDiv = fieldDiv;
+    this.fieldJson = fieldJson;
+    this.decorate();
+  }
 
-  const title = document.createElement('div');
-  title.className = 'title';
-  title.innerText = 'Card Fees';
-  fieldDiv.appendChild(title);
+  decorate() {
+    const {
+      image,
+      cardFees,
+      issuanceFees,
+      annualFees,
+      viewOtherOptions,
+    } = this.fieldJson;
+    const imgElement = document.createElement('img');
+    imgElement.src = image.value;
+    this.fieldDiv.appendChild(imgElement);
 
-  const issuanceFees = document.createElement('div');
-  issuanceFees.className = 'fees';
-  issuanceFees.innerText = 'Issuance Fees: $50';
-  fieldDiv.appendChild(issuanceFees);
+    const cardDetailsDiv = document.createElement('div');
+    cardDetailsDiv.classList.add('card-details');
 
-  const annualFees = document.createElement('div');
-  annualFees.className = 'fees';
-  annualFees.innerText = 'Annual Fees: $100';
-  fieldDiv.appendChild(annualFees);
+    const cardFeesElement = document.createElement('p');
+    cardFeesElement.textContent = cardFees.value;
+    cardDetailsDiv.appendChild(cardFeesElement);
 
-  const button = document.createElement('a');
-  button.className = 'button';
-  button.href = '#';
-  button.innerText = 'View Other Card Options';
-  fieldDiv.appendChild(button);
-  return fieldDiv;
+    const issuanceFeesElement = document.createElement('p');
+    issuanceFeesElement.textContent = issuanceFees.value;
+    cardDetailsDiv.appendChild(issuanceFeesElement);
+
+    const annualFeesElement = document.createElement('p');
+    annualFeesElement.textContent = annualFees.value;
+    cardDetailsDiv.appendChild(annualFeesElement);
+
+    this.fieldDiv.appendChild(cardDetailsDiv);
+
+    const viewOtherOptionsElement = document.createElement('a');
+    viewOtherOptionsElement.href = '#';
+    viewOtherOptionsElement.classList.add('view-other-options');
+    viewOtherOptionsElement.textContent = viewOtherOptions.value;
+    this.fieldDiv.appendChild(viewOtherOptionsElement);
+  }
+}
+
+export default async function decorate(fieldDiv, fieldJson) {
+  const creditCardInfoCard = new CreditCardInfoCard(fieldDiv, fieldJson);
+  return creditCardInfoCard.fieldDiv;
 }

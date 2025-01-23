@@ -1,39 +1,95 @@
 {
-    "definitions": [
-      {
-        "title": "Credit Card Info Component",
-        "id": "credit-card-info-component",
-        "plugins": {
-          "xwalk": {
-            "page": {
-              "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
-              "template": {
-                "jcr:title": "Credit Card Info Component",
-                "fieldType": "panel",
-                "fd:viewType": "credit-card-info-component",
-                "enabled": true,
-                "visible": true
+  "definitions": [
+    {
+      "title": "Credit Card Info Card",
+      "id": "credit_card_info_card",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+            "template": {
+              "jcr:title": "Credit Card Info Card",
+              "fieldType": "panel",
+              "fd:viewType": "credit_card_info_card",
+              "enabled": true,
+              "visible": true,
+              "image": {
+                "value": "",
+                "sling:resourceType": "core/fd/components/form/image/v1/image",
+                "fieldType": "image"
+              },
+              "cardFees": {
+                "value": "Card Fees",
+                "sling:resourceType": "core/fd/components/form/text/v1/text",
+                "fieldType": "plain-text"
+              },
+              "issuanceFees": {
+                "value": "Issuance Fees",
+                "sling:resourceType": "core/fd/components/form/text/v1/text",
+                "fieldType": "plain-text"
+              },
+              "annualFees": {
+                "value": "Annual Fees",
+                "sling:resourceType": "core/fd/components/form/text/v1/text",
+                "fieldType": "plain-text"
+              },
+              "viewOtherOptions": {
+                "value": "View Other Card Options",
+                "sling:resourceType": "core/fd/components/form/button/v1/button",
+                "fieldType": "button"
               }
             }
           }
         }
       }
-    ],
-    "models": [
-      {
-        "id": "credit-card-info-component",
-        "fields": [
-          {
-            "component": "container",
-            "name": "basic",
-            "label": "Basic",
-            "collapsible": false,
-            "...": "../../../../models/form-common/_basic-fields.json"
-          },
-          {
-            "...": "../../../../models/form-common/_help-container.json"
-          }
-        ]
-      }
-    ]
-  }
+    }
+  ],
+  "models": [
+    {
+      "id": "credit_card_info_card",
+      "fields": [
+        {
+          "component": "container",
+          "name": "basic",
+          "label": "Basic",
+          "collapsible": false,
+          "fields": [
+            {
+              "...": "../../../../models/form-common/_basic-input-fields.json"
+            },
+            {
+              "component": "string",
+              "name": "image",
+              "label": "Image URL",
+              "valueType": "string"
+            },
+            {
+              "component": "string",
+              "name": "cardFees",
+              "label": "Card Fees",
+              "valueType": "string"
+            },
+            {
+              "component": "string",
+              "name": "issuanceFees",
+              "label": "Issuance Fees",
+              "valueType": "string"
+            },
+            {
+              "component": "string",
+              "name": "annualFees",
+              "label": "Annual Fees",
+              "valueType": "string"
+            },
+            {
+              "component": "string",
+              "name": "viewOtherOptions",
+              "label": "View Other Card Options",
+              "valueType": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
