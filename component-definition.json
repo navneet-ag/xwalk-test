@@ -226,6 +226,51 @@
           }
         },
         {
+          "title": "Card Component",
+          "id": "credit-card-info-component",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "template": {
+                  "jcr:title": "Card Component",
+                  "fieldType": "panel",
+                  "fd:viewType": "credit-card-info-component",
+                  "enabled": true,
+                  "visible": true,
+                  "image": {
+                    "sling:resourceType": "core/fd/components/form/image/v1/image",
+                    "fieldType": "image",
+                    "enabled": true,
+                    "visible": true
+                  },
+                  "titleText": {
+                    "value": "Card Fees",
+                    "sling:resourceType": "core/fd/components/form/text/v1/text",
+                    "fieldType": "plain-text",
+                    "enabled": true,
+                    "visible": true
+                  },
+                  "bodyText": {
+                    "value": "Issuance Fees: ₹1,000 + GST\nAnnual Fees: ₹0",
+                    "sling:resourceType": "core/fd/components/form/text/v1/text",
+                    "fieldType": "plain-text",
+                    "enabled": true,
+                    "visible": true
+                  },
+                  "linkText": {
+                    "value": "View Other Card Options",
+                    "sling:resourceType": "core/fd/components/form/text/v1/text",
+                    "fieldType": "plain-text",
+                    "enabled": true,
+                    "visible": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Checkbox",
           "id": "checkbox",
           "plugins": {
@@ -282,43 +327,6 @@
                   "fd:viewType": "card-carousel",
                   "enabled": true,
                   "visible": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Credit Card Info Component",
-          "id": "credit-card-info-component",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
-                "template": {
-                  "jcr:title": "Credit Card Info Component",
-                  "fieldType": "panel",
-                  "fd:viewType": "credit-card-info-component",
-                  "enabled": true,
-                  "visible": true,
-                  "image": {
-                    "sling:resourceType": "core/fd/components/form/image/v1/image",
-                    "fieldType": "image",
-                    "enabled": true,
-                    "visible": true
-                  },
-                  "cardFees": {
-                    "title": "Card Fees",
-                    "sling:resourceType": "core/fd/components/form/text/v1/text",
-                    "fieldType": "plain-text",
-                    "enabled": true,
-                    "visible": true
-                  },
-                  "link": {
-                    "sling:resourceType": "core/fd/components/form/textinput/v1/textinput",
-                    "fieldType": "text-input",
-                    "enabled": true,
-                    "visible": true
-                  }
                 }
               }
             }

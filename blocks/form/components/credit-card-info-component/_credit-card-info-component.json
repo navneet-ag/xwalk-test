@@ -1,14 +1,14 @@
 {
   "definitions": [
     {
-      "title": "Credit Card Info Component",
+      "title": "Card Component",
       "id": "credit-card-info-component",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
             "template": {
-              "jcr:title": "Credit Card Info Component",
+              "jcr:title": "Card Component",
               "fieldType": "panel",
               "fd:viewType": "credit-card-info-component",
               "enabled": true,
@@ -19,16 +19,24 @@
                 "enabled": true,
                 "visible": true
               },
-              "cardFees": {
-                "title": "Card Fees",
+              "titleText": {
+                "value": "Card Fees",
                 "sling:resourceType": "core/fd/components/form/text/v1/text",
                 "fieldType": "plain-text",
                 "enabled": true,
                 "visible": true
               },
-              "link": {
-                "sling:resourceType": "core/fd/components/form/textinput/v1/textinput",
-                "fieldType": "text-input",
+              "bodyText": {
+                "value": "Issuance Fees: ₹1,000 + GST\nAnnual Fees: ₹0",
+                "sling:resourceType": "core/fd/components/form/text/v1/text",
+                "fieldType": "plain-text",
+                "enabled": true,
+                "visible": true
+              },
+              "linkText": {
+                "value": "View Other Card Options",
+                "sling:resourceType": "core/fd/components/form/text/v1/text",
+                "fieldType": "plain-text",
                 "enabled": true,
                 "visible": true
               }

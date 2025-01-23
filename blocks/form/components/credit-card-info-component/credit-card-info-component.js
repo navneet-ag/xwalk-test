@@ -1,4 +1,4 @@
-class CreditCardInfoComponent {
+class CardComponent {
   constructor(fieldDiv, fieldJson) {
     this.fieldDiv = fieldDiv;
     this.fieldJson = fieldJson;
@@ -6,31 +6,30 @@ class CreditCardInfoComponent {
   }
 
   decorate() {
-    this.fieldDiv.classList.add('credit-card-info-component-wrapper');
-
     const image = this.fieldDiv.querySelector('img');
+    const titleText = this.fieldDiv.querySelector('.title-text');
+    const bodyText = this.fieldDiv.querySelector('.body-text');
+    const linkText = this.fieldDiv.querySelector('.link-text');
+    const separator = document.createElement('div');
+    separator.classList.add('separator');
+
     if (image) {
-      image.classList.add('credit-card-image');
+      image.classList.add('card-image');
     }
-
-    const cardFeesTitle = this.fieldDiv.querySelector('.card-fees-title');
-    if (cardFeesTitle) {
-      cardFeesTitle.classList.add('card-fees-title');
+    if (titleText) {
+      titleText.classList.add('text-padding');
     }
-
-    const cardFeesDetails = this.fieldDiv.querySelector('.card-fees-details');
-    if (cardFeesDetails) {
-      cardFeesDetails.classList.add('card-fees-details');
+    if (bodyText) {
+      bodyText.classList.add('text-padding');
     }
-
-    const link = this.fieldDiv.querySelector('.link');
-    if (link) {
-      link.classList.add('link');
+    if (linkText) {
+      linkText.classList.add('text-padding');
+      linkText.parentNode.insertBefore(separator, linkText);
     }
   }
 }
 
-export default async function decorate(fieldDiv, fieldJson) {
-  const component = new CreditCardInfoComponent(fieldDiv, fieldJson);
-  return component.fieldDiv;
+export default async function decorate(cardDiv, fieldJson) {
+  const cardComponent = new CardComponent(cardDiv, fieldJson);
+  return cardComponent.fieldDiv;
 }

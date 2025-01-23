@@ -1,29 +1,40 @@
-.credit-card-info-component-wrapper {
-  background-color: white;
-  border: 1px solid lightgrey;
+.card-component-wrapper {
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
   border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
 }
-.credit-card-info-component-wrapper img {
-  display: block;
-  margin: 20px auto;
+.card-component-wrapper img {
+  width: 100%;
+  border-radius: 10px;
 }
-.credit-card-info-component-wrapper .card-fees-title {
+.card-component-wrapper .title-text {
+  font-size: 16px;
+  font-family: Arial;
   font-weight: bold;
+  color: #000000;
   margin-top: 10px;
 }
-.credit-card-info-component-wrapper .card-fees-details {
+.card-component-wrapper .body-text {
+  font-size: 14px;
+  font-family: Arial;
+  color: #333333;
   margin-top: 5px;
 }
-.credit-card-info-component-wrapper .link {
-  color: blue;
-  margin-top: 20px;
-  display: block;
+.card-component-wrapper .link-text {
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #0000FF;
+  margin-top: 15px;
 }
-@media (max-width: 600px) {
-  .credit-card-info-component-wrapper {
-    padding: 10px;
-    margin: 10px;
-  }
+.card-component-wrapper .separator {
+  border-top: 1px solid #E0E0E0;
+  margin-top: 10px;
+}
+.card-component-wrapper .text-padding {
+  padding: 0 15px;
+  margin: 5px 0;
 }
