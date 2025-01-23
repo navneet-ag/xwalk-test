@@ -6,6 +6,7 @@ class CardComponent {
   }
 
   decorate() {
+    this.fieldDiv.classList.add('card-component-wrapper');
     const image = this.fieldDiv.querySelector('img');
     const textElements = this.fieldDiv.querySelectorAll('.plain-text-wrapper');
     const titleText = textElements[0];
@@ -19,9 +20,11 @@ class CardComponent {
       image.classList.add('card-image');
     }
     if (titleText) {
+      titleText.classList.add('title-text');
       titleText.classList.add('text-padding');
     }
     if (bodyText) {
+      bodyText.classList.add('body-text');
       bodyText.classList.add('text-padding');
     }
     if (linkButton) {
