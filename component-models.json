@@ -3831,7 +3831,7 @@
     ]
   },
   {
-    "id": "credit_card_info_card",
+    "id": "credit-card-info-component",
     "fields": [
       {
         "component": "container",

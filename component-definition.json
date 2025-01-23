@@ -289,7 +289,7 @@
         },
         {
           "title": "Credit Card Info Card",
-          "id": "credit_card_info_card",
+          "id": "credit-card-info-component",
           "plugins": {
             "xwalk": {
               "page": {
@@ -297,7 +297,7 @@
                 "template": {
                   "jcr:title": "Credit Card Info Card",
                   "fieldType": "panel",
-                  "fd:viewType": "credit_card_info_card",
+                  "fd:viewType": "credit-card-info-component",
                   "enabled": true,
                   "visible": true,
                   "image": {
