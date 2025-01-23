@@ -12,6 +12,7 @@ export default async function decorate(fieldDiv, fieldJson) {
   // description.className = 'description';
   // description.textContent = fieldJson.description.value;
   // fieldDiv.appendChild(description);
+  console.log('fieldJson', fieldJson);
 
   const separator = document.createElement('div');
   separator.className = 'separator';
