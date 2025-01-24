@@ -20,13 +20,20 @@
                 "textIsRich": true
               },
               "panels":{
-                  "image": {
-                    "editable": true,
-                    "sling:resourceType": "core/fd/components/form/image/v1/image",
-                    "fieldType": "image"
-                  },
-                  "text": "Zero Cross Currency conversion mark-up charges"
-                }
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "fieldType": "panel",
+                "image": {
+                  "editable": true,
+                  "sling:resourceType": "core/fd/components/form/image/v1/image",
+                  "fieldType": "image"
+                },
+                "text": {
+                  "value": "Your Moneyback+ Credit Card at a glance!",
+                  "sling:resourceType": "core/fd/components/form/text/v1/text",
+                  "fieldType": "plain-text",
+                  "textIsRich": true
+              }
+              }
             }
           }
         }
