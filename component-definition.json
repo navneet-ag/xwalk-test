@@ -527,6 +527,38 @@
           }
         },
         {
+          "title": "Card Benefits Options Panel",
+          "id": "card-benefits-options-panel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "template": {
+                  "jcr:title": "Card Benefits Options Panel",
+                  "fieldType": "panel",
+                  "fd:viewType": "card-benefits-options-panel",
+                  "enabled": true,
+                  "visible": true,
+                  "text": {
+                    "value": "Your Moneyback+ Credit Card at a glance!",
+                    "sling:resourceType": "core/fd/components/form/text/v1/text",
+                    "fieldType": "plain-text",
+                    "textIsRich": true
+                  },
+                  "panels": {
+                    "image": {
+                      "editable": true,
+                      "sling:resourceType": "core/fd/components/form/image/v1/image",
+                      "fieldType": "image"
+                    },
+                    "text": "Zero Cross Currency conversion mark-up charges"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Credit Card Carousel",
           "id": "card-carousel",
           "plugins": {
