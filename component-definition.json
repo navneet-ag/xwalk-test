@@ -545,8 +545,11 @@
                     "fieldType": "plain-text",
                     "textIsRich": true
                   },
-                  "panels": {
-                    "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                  "panel1": {
+                    "jcr:title": "Item 1",
+                    "visible": true,
+                    "enabled": true,
+                    "sling:resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
                     "fieldType": "panel",
                     "image": {
                       "editable": true,
