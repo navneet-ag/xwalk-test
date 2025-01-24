@@ -540,27 +540,29 @@
                   "enabled": true,
                   "visible": true,
                   "text": {
-                    "value": "Your Moneyback+ Credit Card at a glance!",
+                    "value": "",
                     "sling:resourceType": "core/fd/components/form/text/v1/text",
-                    "fieldType": "plain-text",
-                    "textIsRich": true
+                    "fieldType": "plain-text"
                   },
                   "panel1": {
-                    "jcr:title": "Item 1",
+                    "jcr:title": "Inner Panel",
                     "visible": true,
                     "enabled": true,
                     "sling:resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
                     "fieldType": "panel",
                     "image": {
+                      "value": "",
                       "editable": true,
+                      "visible": true,
                       "sling:resourceType": "core/fd/components/form/image/v1/image",
                       "fieldType": "image"
                     },
                     "text": {
-                      "value": "Your Moneyback+ Credit Card at a glance!",
+                      "value": "",
+                      "editable": true,
+                      "visible": true,
                       "sling:resourceType": "core/fd/components/form/text/v1/text",
-                      "fieldType": "plain-text",
-                      "textIsRich": true
+                      "fieldType": "plain-text"
                     }
                   }
                 }

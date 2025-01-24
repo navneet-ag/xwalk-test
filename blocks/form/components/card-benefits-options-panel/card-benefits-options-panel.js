@@ -1,4 +1,4 @@
-class CardBenefitsOptionsPanel {
+class BenefitsPanel {
   constructor(fieldDiv, fieldJson) {
     this.fieldDiv = fieldDiv;
     this.fieldJson = fieldJson;
@@ -6,30 +6,21 @@ class CardBenefitsOptionsPanel {
   }
 
   decorate() {
-    const { template: { panels } } = this.fieldJson;
-    panels.forEach((panel) => {
-      const panelDiv = document.createElement('div');
-      panelDiv.classList.add('panel-wrapper');
+    const title = this.fieldDiv.querySelector('.field-label');
+    title.classList.add('benefits-panel__title');
 
-      const panelContent = document.createElement('div');
-      panelContent.classList.add('panel-content');
-
-      const img = document.createElement('img');
-      img.src = panel.image.editable ? 'editable-image-placeholder.png' : panel.image;
-      panelContent.appendChild(img);
-
-      const text = document.createElement('div');
-      text.classList.add('text');
-      text.textContent = panel.text;
-      panelContent.appendChild(text);
-
-      panelDiv.appendChild(panelContent);
-      this.fieldDiv.appendChild(panelDiv);
+    const benefitItems = this.fieldDiv.querySelectorAll('.benefit-item');
+    benefitItems.forEach((item) => {
+      item.classList.add('benefits-panel__item');
+      const icon = item.querySelector('.icon');
+      icon.classList.add('benefits-panel__icon');
+      const description = item.querySelector('.description');
+      description.classList.add('benefits-panel__description');
     });
   }
 }
 
 export default async function decorate(fieldDiv, fieldJson) {
-  const cardBenefitsOptionsPanel = new CardBenefitsOptionsPanel(fieldDiv, fieldJson);
-  return cardBenefitsOptionsPanel.fieldDiv;
+  const panel = new BenefitsPanel(fieldDiv, fieldJson);
+  return panel.fieldDiv;
 }
