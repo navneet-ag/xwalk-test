@@ -72,7 +72,8 @@
       "nps-rating",
       "rating-scale",
       "card-carousel",
-      "credit-card-info-component"
+      "credit-card-info-component",
+      "card-benefits-options-panel"
     ]
   }
 ]
