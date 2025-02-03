@@ -361,7 +361,7 @@ function enableAuthoringAssistantExtension() {
     if (version === 'local') {
       meta.content = 'https://localhost.corp.adobe.com:8013/dist/universal_editor.html';
     } else {
-      meta.content = 'https://experience.adobe.com/solutions/livecycle-authoring-assistant-spa/static-assets/universal_editor.html?livecycle-authoring-assistant-spa_version=${version}';
+      meta.content = `https://experience.adobe.com/solutions/livecycle-authoring-assistant-spa/static-assets/universal_editor.html?livecycle-authoring-assistant-spa_version=${version}`;
     }
   } else {
     meta.content = 'https://experience.adobe.com/solutions/livecycle-authoring-assistant-spa/static-assets/universal_editor.html?livecycle-authoring-assistant-spa_version=PR-131-62c7cfd09c09c61572f5b7c5016253d5314d84a3';
