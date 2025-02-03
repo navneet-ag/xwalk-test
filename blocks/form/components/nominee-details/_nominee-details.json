@@ -45,7 +45,8 @@
                   "editable": true,
                   "visible": true,
                   "sling:resourceType": "core/fd/components/form/checkbox/v1/checkbox",
-                  "fieldType": "checkbox"
+                  "fieldType": "checkbox",
+                  "checkedValue": "on"
                 },
                 "editButton": {
                   "value": "",
