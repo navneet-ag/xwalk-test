@@ -1,0 +1,33 @@
+.nominee-details-panel {
+  border-radius: 8px;
+  background-color: #f0f4ff;
+  font-family: 'Arial, sans-serif';
+  padding: 20px;
+  margin: 10px;
+}
+
+.nominee-details-panel .main-text {
+  font-size: 16px;
+}
+
+.nominee-details-panel .subtext {
+  font-size: 14px;
+  color: #666;
+}
+
+.nominee-details-panel .radio-group {
+  border-color: #0056b3;
+}
+
+.nominee-details-panel .checkbox {
+  margin-right: 10px;
+}
+
+.nominee-details-panel .edit-button {
+  margin-left: 10px;
+}
+
+.nominee-details-panel .add-new-nominee-button {
+  color: #0056b3;
+  text-decoration: underline;
+}

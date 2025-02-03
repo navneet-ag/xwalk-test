@@ -652,6 +652,62 @@
           }
         },
         {
+          "title": "Nominee Details",
+          "id": "nominee-details",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                "template": {
+                  "jcr:title": "Nominee Details",
+                  "fieldType": "panel",
+                  "fd:viewType": "nominee-details",
+                  "enabled": true,
+                  "visible": true,
+                  "plainText": {
+                    "value": "",
+                    "sling:resourceType": "core/fd/components/form/text/v1/text",
+                    "fieldType": "plain-text"
+                  },
+                  "radioGroup": {
+                    "value": "",
+                    "sling:resourceType": "core/fd/components/form/radiobutton/v1/radiobutton",
+                    "fieldType": "radio-group"
+                  },
+                  "panel1": {
+                    "jcr:title": "Nominee Panel",
+                    "visible": true,
+                    "enabled": true,
+                    "sling:resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
+                    "fieldType": "panel",
+                    "checkbox": {
+                      "value": "",
+                      "editable": true,
+                      "visible": true,
+                      "sling:resourceType": "core/fd/components/form/checkbox/v1/checkbox",
+                      "fieldType": "checkbox"
+                    },
+                    "editButton": {
+                      "value": "",
+                      "editable": true,
+                      "visible": true,
+                      "sling:resourceType": "core/fd/components/form/button/v1/button",
+                      "fieldType": "button"
+                    }
+                  },
+                  "addButton": {
+                    "value": "",
+                    "editable": true,
+                    "visible": true,
+                    "sling:resourceType": "core/fd/components/form/button/v1/button",
+                    "fieldType": "button"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "NPS Rating",
           "id": "nps-rating",
           "plugins": {

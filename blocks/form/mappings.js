@@ -1,6 +1,6 @@
 import { loadCSS } from '../../scripts/aem.js';
 
-let customComponents = ['range', 'scribble-signature', 'otp', 'nps-rating', 'rating-scale', 'card-carousel', 'credit-card-info-component', 'card-benefits-options-panel'];
+let customComponents = ['range', 'scribble-signature', 'otp', 'nps-rating', 'rating-scale', 'card-carousel', 'credit-card-info-component', 'card-benefits-options-panel', 'nominee-details'];
 const OOTBComponentDecorators = ['file-input', 'wizard', 'modal', 'tnc', 'toggleable-link', 'rating', 'datetime', 'list', 'location'];
 
 export function setCustomComponents(components) {
