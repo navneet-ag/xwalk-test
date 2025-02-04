@@ -672,7 +672,18 @@
                   "radioGroup": {
                     "value": "",
                     "sling:resourceType": "core/fd/components/form/radiobutton/v1/radiobutton",
-                    "fieldType": "radio-group"
+                    "fieldType": "radio-group",
+                    "enum": [
+                      "0",
+                      "1"
+                    ],
+                    "enumNumes": [
+                      "Item 1",
+                      "Item 2"
+                    ],
+                    "enabled": true,
+                    "visible": true,
+                    "orientation": "horizontal"
                   },
                   "panel1": {
                     "jcr:title": "Nominee Panel",
