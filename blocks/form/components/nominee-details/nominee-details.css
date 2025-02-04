@@ -1,33 +1,67 @@
 .nominee-details-panel {
-  border-radius: 8px;
-  background-color: #f0f4ff;
-  font-family: 'Arial, sans-serif';
-  padding: 20px;
-  margin: 10px;
-}
-
-.nominee-details-panel .main-text {
+  background-color: #f5f7fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 16px 0;
+  font-family: Arial, sans-serif;
   font-size: 16px;
 }
 
-.nominee-details-panel .subtext {
+.nominee-details-panel__header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nominee-details-panel__plain-text {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
+}
+
+.nominee-details-panel__plain-text-description {
   font-size: 14px;
   color: #666;
+  margin: 4px 0;
 }
 
-.nominee-details-panel .radio-group {
-  border-color: #0056b3;
+.nominee-details-panel__radio-group {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
 }
 
-.nominee-details-panel .checkbox {
-  margin-right: 10px;
+.nominee-details-panel__inner-panel {
+  background-color: #f5f7fa;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
-.nominee-details-panel .edit-button {
-  margin-left: 10px;
+.nominee-details-panel__checkbox {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
 }
 
-.nominee-details-panel .add-new-nominee-button {
-  color: #0056b3;
-  text-decoration: underline;
+.nominee-details-panel__edit-button {
+  font-size: 16px;
+  color: #007bff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+.nominee-details-panel__add-button {
+  font-size: 16px;
+  color: #007bff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 8px 0;
 }

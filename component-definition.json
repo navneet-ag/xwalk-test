@@ -652,16 +652,16 @@
           }
         },
         {
-          "title": "Nominee Details",
-          "id": "nominee-details",
+          "title": "Nominee Details Account",
+          "id": "nominee-details-account",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/fd/components/form/panelcontainer/v1/panelcontainer",
                 "template": {
-                  "jcr:title": "Nominee Details",
+                  "jcr:title": "Nominee Details Account",
                   "fieldType": "panel",
-                  "fd:viewType": "nominee-details",
+                  "fd:viewType": "nominee-details-account",
                   "enabled": true,
                   "visible": true,
                   "plainText": {
@@ -672,18 +672,7 @@
                   "radioGroup": {
                     "value": "",
                     "sling:resourceType": "core/fd/components/form/radiobutton/v1/radiobutton",
-                    "fieldType": "radio-group",
-                    "enum": [
-                      "0",
-                      "1"
-                    ],
-                    "enumNumes": [
-                      "Item 1",
-                      "Item 2"
-                    ],
-                    "enabled": true,
-                    "visible": true,
-                    "orientation": "horizontal"
+                    "fieldType": "radio-group"
                   },
                   "panel1": {
                     "jcr:title": "Nominee Panel",
@@ -696,11 +685,10 @@
                       "editable": true,
                       "visible": true,
                       "sling:resourceType": "core/fd/components/form/checkbox/v1/checkbox",
-                      "fieldType": "checkbox",
-                      "checkedValue": "on"
+                      "fieldType": "checkbox"
                     },
                     "editButton": {
-                      "value": "",
+                      "value": "Edit",
                       "editable": true,
                       "visible": true,
                       "sling:resourceType": "core/fd/components/form/button/v1/button",
@@ -708,7 +696,7 @@
                     }
                   },
                   "addButton": {
-                    "value": "",
+                    "value": "Add More Nominees",
                     "editable": true,
                     "visible": true,
                     "sling:resourceType": "core/fd/components/form/button/v1/button",

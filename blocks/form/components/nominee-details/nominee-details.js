@@ -1,4 +1,4 @@
-class NomineeDetailsComponent {
+class NomineeDetails {
   constructor(fieldDiv, fieldJson) {
     this.fieldDiv = fieldDiv;
     this.fieldJson = fieldJson;
@@ -8,46 +8,70 @@ class NomineeDetailsComponent {
   decorate() {
     this.fieldDiv.classList.add('nominee-details-panel');
 
-    const mainText = this.fieldDiv.querySelector('.plain-text-wrapper p');
-    if (mainText) {
-      mainText.classList.add('main-text');
-      mainText.innerText = 'Do you want to add a Nominee?';
+    const header = this.fieldDiv.querySelector('legend');
+    if (header) {
+      header.classList.add('nominee-details-panel__header');
     }
 
-    const subText = document.createElement('p');
-    subText.classList.add('subtext');
-    subText.innerText = 'You can add up to 4 nominees';
-    if (mainText) {
-      mainText.parentNode.insertBefore(subText, mainText.nextSibling);
-    }
-
-    const radioGroup = this.fieldDiv.querySelector('.radio-group-wrapper');
-    if (radioGroup) {
-      radioGroup.classList.add('radio-group');
-    }
-
-    const checkBoxGroup = this.fieldDiv.querySelector('.checkbox-group-wrapper');
-    if (checkBoxGroup) {
-      const checkBoxLabel = checkBoxGroup.querySelector('label');
-      if (checkBoxLabel) {
-        checkBoxLabel.innerText = 'Sarika Kathrani';
+    const plainTextWrapper = this.fieldDiv.querySelector('.plain-text-wrapper');
+    if (plainTextWrapper) {
+      plainTextWrapper.classList.add('nominee-details-panel__plain-text');
+      const p = plainTextWrapper.querySelector('p');
+      if (p) {
+        p.innerText = 'Do you want to add a Nominee?';
       }
-
-      const editButton = document.createElement('button');
-      editButton.classList.add('edit-button');
-      editButton.innerText = 'Edit';
-      checkBoxGroup.appendChild(editButton);
+      const description = document.createElement('p');
+      description.classList.add('nominee-details-panel__plain-text-description');
+      description.innerText = 'You can add up to 4 nominees';
+      plainTextWrapper.appendChild(description);
     }
 
-    const addNewNomineeButton = this.fieldDiv.querySelector('.button-wrapper button');
-    if (addNewNomineeButton) {
-      addNewNomineeButton.classList.add('add-new-nominee-button');
-      addNewNomineeButton.innerText = 'Add New Nominee';
+    const radioGroupWrapper = this.fieldDiv.querySelector('.radio-group-wrapper');
+    if (radioGroupWrapper) {
+      radioGroupWrapper.classList.add('nominee-details-panel__radio-group');
+      const radioButtons = radioGroupWrapper.querySelectorAll('input[type="radio"]');
+      radioButtons.forEach((radio, index) => {
+        if (index === 0) {
+          radio.checked = true;
+        }
+      });
+    }
+
+    const innerPanel = this.fieldDiv.querySelector('.panel-wrapper');
+    if (innerPanel) {
+      innerPanel.classList.add('nominee-details-panel__inner-panel');
+    }
+
+    const checkboxWrapper = this.fieldDiv.querySelector('.checkbox-wrapper');
+    if (checkboxWrapper) {
+      checkboxWrapper.classList.add('nominee-details-panel__checkbox');
+      const label = checkboxWrapper.querySelector('label');
+      if (label) {
+        label.innerText = this.fieldJson.nominee;
+      }
+    }
+
+    const editButtonWrapper = this.fieldDiv.querySelector('.button-wrapper[data-active="true"]');
+    if (editButtonWrapper) {
+      const editButton = editButtonWrapper.querySelector('button');
+      if (editButton) {
+        editButton.classList.add('nominee-details-panel__edit-button');
+        editButton.innerText = 'Edit';
+      }
+    }
+
+    const addButtonWrapper = this.fieldDiv.querySelector('.button-wrapper[data-active="true"]:last-child');
+    if (addButtonWrapper) {
+      const addButton = addButtonWrapper.querySelector('button');
+      if (addButton) {
+        addButton.classList.add('nominee-details-panel__add-button');
+        addButton.innerText = 'Add New Nominee';
+      }
     }
   }
 }
 
 export default async function decorate(fieldDiv, fieldJson) {
-  const nomineeDetailsComponent = new NomineeDetailsComponent(fieldDiv, fieldJson);
-  return nomineeDetailsComponent.fieldDiv;
+  const nomineeDetails = new NomineeDetails(fieldDiv, fieldJson);
+  return nomineeDetails.fieldDiv;
 }

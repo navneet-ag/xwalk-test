@@ -4274,7 +4274,7 @@
     ]
   },
   {
-    "id": "nominee-details",
+    "id": "nominee-details-account",
     "fields": [
       {
         "component": "container",
