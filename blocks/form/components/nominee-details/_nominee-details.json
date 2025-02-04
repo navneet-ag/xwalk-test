@@ -23,9 +23,9 @@
                 "sling:resourceType": "core/fd/components/form/radiobutton/v1/radiobutton",
                 "fieldType": "radio-group",
                 "enum": [
-                   "0",
-                   "1"
-                  ],
+                  "0",
+                  "1"
+                ],
                 "enumNumes": [
                   "Item 1",
                   "Item 2"
